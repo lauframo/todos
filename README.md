@@ -35,7 +35,7 @@ $ curl --data "username=john&task_name=cook&due_date=2017-02-08" http://localhos
 ```
 To mark an item as complete:
 ```bash
-$ curl --data "username=john&task_name=cook&due" http://localhost:9393/v1/update_task
+$ curl --data "username=john&task_name=cook" http://localhost:9393/v1/update_task
 ```
 Make sure to enter all due dates in the format of YYYY-MM-DD in order to succesfully create and update.
 
