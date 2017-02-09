@@ -22,20 +22,20 @@ $ bundle exec rake db:seed
 *Make your requests
 For all of John's tasks:
 ```bash
-$ curl --data "username=john" http://localhost:9393/user/all_items
+$ curl http://localhost:9393/user/all_items?username=john
 ```
 For all of John's uncomplete tasks:
 For all of John's tasks:
 ```bash
-$ curl --data "username=john" http://localhost:9393/user/incomplete_items
+$ curl http://localhost:9393/user/incomplete_items?username=john
 ```
 To create a brand new item:
 ```bash
-$ curl --data "username=john&task_name=cook&due_date=2017-02-08" http://localhost:9393/user/create_task
+$ curl --data "username=john&task_name=cook&due_date=2017-02-08" http://localhost:9393/create_task
 ```
 To mark an item as complete:
 ```bash
-$ curl --data "username=john&task_name=cook&due" http://localhost:9393/user/update_task
+$ curl --data "username=john&task_name=cook&due" http://localhost:9393/update_task
 ```
 Make sure to enter all due dates in the format of YYYY-MM-DD in order to succesfully create and update.
 
