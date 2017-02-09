@@ -34,8 +34,6 @@ module ToDos
 				@task = Todo.new(task_name: params[:task_name], due_date: params[:due_date])
 				@user.todos << @task
 				@task.save
-				@task.complete = false
-				@task.save
 				@task
 			end
 		end
